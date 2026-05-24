@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOC Caffe & Roastery | الرياض</title>
+    <style>
+        :root {
+            --noc-dark-bg: #121212;
+            --noc-card-bg: #1c1c1e;
+            --noc-gold: #c5a880;
+            --noc-text-light: #f5f5f7;
+            --noc-text-muted: #a1a1a6;
+            --noc-border: #2c2c2e;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--noc-dark-bg);
+            color: var(--noc-text-light);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-scroll {
+            animation: fadeInUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .hero {
+            position: relative;
+            height: 70vh;
+            background: linear-gradient(rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 1)), 
+                        url('https://www.arabnews.com/sites/default/files/styles/gallery_large/public/2021/11/17/2916576-245464191.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 6px;
+            color: var(--noc-text-light);
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--noc-gold);
+            margin: 15px 0 0 0;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .menu-title-main {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--noc-text-light);
+            margin: 40px 0 60px 0;
+        }
+
+        .menu-title-main span {
+            color: var(--noc-gold);
+        }
+
+        /* تقسيم المنيو إلى شبكة أنيقة */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-grid { grid-template-columns: 1fr; gap: 25px; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+
+        .menu-category {
+            background-color: var(--noc-card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid var(--noc-border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .category-name {
+            font-size: 1.3rem;
+            color: var(--noc-gold);
+            border-bottom: 1px solid var(--noc-border);
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            padding-bottom: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateX(-5px);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+
+        .item-price {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--noc-gold);
+        }
+
+        .item-desc {
+            font-size: 0.9rem;
+            color: var(--noc-text-muted);
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+
+        .vibe-banner {
+            height: 400px;
+            background: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), 
+                        url('https://www.arabnews.com/sites/default/files/styles/gallery_large/public/2021/11/17/2916571-1127011961.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            border-radius: 12px;
+            margin: 60px 0;
+            border: 1px solid var(--noc-border);
+        }
+
+        .footer-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .footer-boxes { grid-template-columns: 1fr; }
+        }
+
+        .box {
+            background-color: var(--noc-card-bg);
+            border: 1px solid var(--noc-border);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .box h3 {
+            color: var(--noc-gold);
+            margin-top: 0;
+        }
+
+        .box p {
+            color: var(--noc-text-muted);
+            margin: 6px 0;
+        }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--noc-text-light);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--noc-gold);
+            padding-bottom: 2px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+            color: var(--noc-text-muted);
+            border-top: 1px solid var(--noc-border);
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero animate-scroll">
+        <h1>NOC CAFFE</h1>
+        <p>ROASTERY & COZY SPACE | الرياض</p>
+    </section>
+
+    <div class="container animate-scroll">
+        
+        <h2 class="menu-title-main">قائمة <span>NOC الحقيقية</span></h2>
+
+        <div class="menu-grid">
+            
+            <div class="menu-category">
+                <span class="category-name">HOT ESPRESSO DRINKS</span>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Espresso / إسبريسو</span>
+                        <span class="item-price">14 ر.س</span>
+                    </div>
+                    <span class="item-desc">جرعة مركزة ونقية من محاصيلنا الفاخرة المجهزة في محمصتنا.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Americano / أمريكابو</span>
+                        <span class="item-price">16 ر.س</span>
+                    </div>
+                    <span class="item-desc">إسبريسو مستخلص يمتزج بالماء الساخن لقوام غني متوازن.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Flat White / فلات وايت</span>
+                        <span class="item-price">18 ر.س</span>
+                    </div>
+                    <span class="item-desc">التناغم الكلاسيكي الفاخر بين الإسبريسو والحليب المبخر بنعومة.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Café Latte / كافيه لاتيه</span>
+                        <span class="item-price">19 ر.س</span>
+                    </div>
+                    <span class="item-desc">إسبريسو مع كمية وفيرة من الحليب الدافئ يعلوه طبقة رغوة خفيفة.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Cappuccino / كابوتشينو</span>
+                        <span class="item-price">19 ر.س</span>
+                    </div>
+                    <span class="item-desc">الرغوة الغنية الكثيفة تلتقي مع نكهة القهوة العميقة.</span>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <span class="category-name">POUROVER & SPECIALTY</span>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">V60 Drip Coffee / تقطير V60</span>
+                        <span class="item-price">22 ر.س</span>
+                    </div>
+                    <span class="item-desc">تُحضر يدوياً ببطء لإبراز الإيحاءات الفاخرة والحمضية المتوازنة للمحصول.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Chemex / كيمكس</span>
+                        <span class="item-price">24 ر.س</span>
+                    </div>
+                    <span class="item-desc">استخلاص نقي جداً وقوام خفيف يبرز تفاصيل نكهة البُن الكاملة.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Cortado / كورتادو</span>
+                        <span class="item-price">17 ر.س</span>
+                    </div>
+                    <span class="item-desc">كميات متساوية تماماً من الإسبريسو والحليب الدافئ لنكهة مركزة.</span>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <span class="category-name">COLD DRINKS</span>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Signature Cold Brew / كولد برو</span>
+                        <span class="item-price">24 ر.س</span>
+                    </div>
+                    <span class="item-desc">قهوة منقوعة بارداً لمدة 14 ساعة لتقديم انتعاش ناعم ومكثف.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Iced Latte / لاتيه بارد</span>
+                        <span class="item-price">20 ر.س</span>
+                    </div>
+                    <span class="item-desc">إسبريسو فخم يسكب فوق الحليب البارد وقطع الثلج المنعشة.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Iced Spanish Latte / سبانش لاتيه بارد</span>
+                        <span class="item-price">23 ر.س</span>
+                    </div>
+                    <span class="item-desc">اللمسة الحلوة المميزة مع الإسبريسو القوي والحليب المكثف والثلج.</span>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <span class="category-name">DESSERTS & BAKERY</span>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">San Sebastian Cheesecake / سان سيباستيان</span>
+                        <span class="item-price">26 ر.س</span>
+                    </div>
+                    <span class="item-desc">كيكة الجبن الشهيرة بقوامها الكريمي الهش المحروق طازجة يومياً.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Classic Honey Cake / كيكة العسل</span>
+                        <span class="item-price">24 ر.س</span>
+                    </div>
+                    <span class="item-desc">طبقات رقيقة مشبعة بالعسل الطبيعي والكريمة الخفيفة المتناغمة.</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Almond Croissant / كرواسون اللوز</span>
+                        <span class="item-price">16 ر.س</span>
+                    </div>
+                    <span class="item-desc">مخبوز فرنسي هش ومقرمش محشو ومزين بكريمة اللوز الفاخرة.</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="vibe-banner"></div>
+
+        <div class="footer-boxes">
+            <div class="box">
+                <h3>أوقات العمل</h3>
+                <p>السبت - الخميس: 06:00 صباحاً – 12:00 منتصف الليل</p>
+                <p>الجمعة: 01:00 ظهراً – 01:00 صباحاً</p>
+            </div>
+            <div class="box">
+                <h3>الموقع والمساحة</h3>
+                <p>طريق الملك خالد، الرياض، المملكة العربية السعودية</p>
+                <a href="#" class="map-link">📍 اضغط لفتح الموقع في خرائط Google</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NOC CAFFE & ROASTERY. ALL RIGHTS RESERVED. CODED WITH ACCURACY BY MARIA.</p>
+    </footer>
+
+</body>
+</html>
