@@ -1,0 +1,381 @@
+/* ==========================================================================
+   NOC CAFFE - Unlocked & Complete Premium Stylesheet
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+/* شريط التنقل العلوي */
+.main-header {
+    background-color: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.main-header .logo a {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active-link {
+    color: #fff;
+}
+
+.nav-menu a.shop-highlight {
+    color: #cbb29b !important;
+    font-weight: 600;
+}
+
+/* زر القائمة للجوال */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* الواجهة الرئيسية الكبرى */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('IMG_8037.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.welcome-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #cbb29b;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 35px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #cbb29b;
+    color: #111;
+    text-decoration: none;
+    padding: 14px 35px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover { background-color: #fff; transform: translateY(-2px); }
+
+/* ==========================================================================
+   قسم تشكيلة الحبوب المختارة (Featured) 
+   ========================================================================== */
+.featured-section {
+    position: relative;
+    z-index: 10;
+    background-color: #161616; 
+    padding: 100px 20px;
+    text-align: center;
+    display: block; 
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.featured-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* الرابط المحيط بالكارت كاملاً لتفعيل الضغط والتحويل للمتجر */
+.product-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+}
+
+.featured-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    background-color: #eaddd0; 
+    border-radius: 25px; 
+    padding: 40px 20px;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+/* تأثيرات حركية أنيقة عند تمرير الماوس فوق الكارت */
+.product-link-wrapper:hover .image-container {
+    transform: scale(1.03);
+}
+
+.product-link-wrapper:hover .options-btn {
+    background-color: #fff;
+    color: #111;
+}
+
+.featured-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.featured-price {
+    font-size: 1.1rem;
+    color: #cbb29b;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.options-btn {
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   قسم مهمتنا (Our Mission) 
+   ========================================================================== */
+.mission-section {
+    position: relative;
+    z-index: 10;
+    padding: 120px 20px;
+    background-image: url('IMG_8037.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    text-align: center;
+    display: block;
+}
+
+.mission-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 20, 0.85); 
+    z-index: 1;
+}
+
+.mission-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* تنسيق متناسق للصورة الجديدة فوق قسم Our Mission */
+.mission-image-container {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.mission-img {
+    width: 130px; 
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%; /* جعل الصورة دائرية لتناسب التصميم الاحترافي */
+    border: 3px solid #cbb29b; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.mission-content h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.mission-content p {
+    font-size: 1.15rem;
+    color: #ccc;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #111;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #cbb29b;
+    transform: translateY(-2px);
+}
+
+/* الفوتر */
+#contact {
+    position: relative;
+    z-index: 10;
+    background-color: #0f0f0f;
+    color: #aaa;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    display: block;
+}
+
+#contact h2 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* التجاوب مع شاشات الجوال */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0f0f0f;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    .nav-menu.active { display: flex; }
+    .hero-content h1 { font-size: 2rem; }
+    .image-container { height: 280px; }
+    .mission-img { width: 110px; height: 110px; } /* تصغير الصورة قليلاً على الجوال لتكون مريحة للعين */
+}
