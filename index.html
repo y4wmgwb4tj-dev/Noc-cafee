@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOC CAFFE - Specialty Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">NOC CAFFE</a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="active-link">Home</a>
+            <a href="shop.html" class="shop-highlight">☕ Shop Beans</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero-section" style="background-image: url('IMG_8037.jpeg');">
+        <div class="hero-overlay"></div> <div class="hero-content">
+            <span class="welcome-tag">WELCOME TO NOC CAFFE</span>
+            <h1>EXPERIENCE THE ART OF SPECIALTY COFFEE</h1>
+            <p>Discover our curated collection of 18 premium hand-picked coffee beans roasted to perfection.</p>
+            <a href="shop.html" class="cta-button">Explore Our Shop</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>CONNECT WITH US</h2>
+        <p>Location: Riyadh, Saudi Arabia</p>
+        <p>Follow us for daily specialty updates</p>
+        <p class="copyright">© 2026 NOC CAFFE. Crafted with Pride.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
