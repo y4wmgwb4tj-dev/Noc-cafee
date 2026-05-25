@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOC Cafe | الرياض</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: '#110F0E',
+                        warmBeige: '#F7F4F0',
+                        goldAccent: '#D4AF37'
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            scroll-behavior: smooth;
+        }
+        /* تأثير تنعيم الحركة عند الانتقال */
+        .smooth-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-[#F7F4F0] text-[#110F0E] antialiased overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full bg-[#110F0E]/95 backdrop-blur-md text-white py-4 px-6 z-50 shadow-2xl border-b border-[#D4AF37]/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button class="md:hidden text-2xl hover:text-[#D4AF37] transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <button onclick="alert('Language switching feature will be connected to translation files soon!')" class="border border-[#D4AF37] text-[#D4AF37] text-xs font-bold px-3 py-1.5 rounded hover:bg-[#D4AF37] hover:text-[#110F0E] smooth-transition flex items-center gap-1">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>EN</span>
+                </button>
+            </div>
+
+            <div class="hidden md:flex space-x-8 space-x-reverse text-xs uppercase tracking-wider font-medium">
+                <a href="#home" class="hover:text-[#D4AF37] relative after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] hover:after:w-full after:transition-all smooth-transition">الرئيسية</a>
+                <a href="#shop" class="hover:text-[#D4AF37] relative after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] hover:after:w-full after:transition-all smooth-transition">متجر الحبوب</a>
+                <a href="#menu" class="hover:text-[#D4AF37] relative after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] hover:after:w-full after:transition-all smooth-transition">قائمة المنيو</a>
+                <a href="#about" class="hover:text-[#D4AF37] relative after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] hover:after:w-full after:transition-all smooth-transition">فلسفتنا</a>
+                <a href="#contact" class="hover:text-[#D4AF37] relative after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] hover:after:w-full after:transition-all smooth-transition">اتصل بنا</a>
+            </div>
+
+            <a href="#" class="text-2xl font-black tracking-widest text-[#D4AF37] hover:opacity-80 transition">NOC CAFE</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center bg-[#110F0E] text-white px-6 overflow-hidden">
+        <div class="absolute inset-0 opacity-50 scale-105 hover:scale-100 smooth-transition duration-1000">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="NOC Cafe">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#110F0E] via-transparent to-black/50"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto text-center space-y-6 animate-fade-in-up">
+            <span class="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold block bg-[#D4AF37]/10 px-4 py-1.5 rounded-full w-max mx-auto border border-[#D4AF37]/20">محامص القهوة المختصة</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight tracking-wide">فخامة البساطة <br><span class="text-[#D4AF37]">في قلب الرياض</span></h1>
+            <p class="text-sm md:text-lg text-gray-300 font-light max-w-xl mx-auto leading-relaxed">تجربة حسية استثنائية تنبض بالحياة، نختارها من أعلى القمم لتليق بتطلعات العاصمة.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+                <a href="#shop" class="bg-[#D4AF37] text-[#110F0E] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-lg hover:bg-white hover:shadow-[#D4AF37]/20 transform hover:-translate-y-1 smooth-transition">استكشف المتجر</a>
+                <a href="#menu" class="border border-white/30 text-white font-medium text-xs uppercase tracking-widest px-8 py-4 rounded-full backdrop-blur-sm hover:bg-white hover:text-[#110F0E] transform hover:-translate-y-1 smooth-transition">مشاهدة المنيو</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="max-w-7xl mx-auto px-6 py-28">
+        <div class="text-center max-w-xl mx-auto mb-20 space-y-3">
+            <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold block">متجر الحبوب الفاخرة</span>
+            <h2 class="text-4xl font-bold tracking-tight text-[#110F0E]">احصل على محصولك الفاخر اليوم</h2>
+            <div class="h-[2px] w-16 bg-[#D4AF37] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-gray-100 group smooth-transition flex flex-col md:flex-row">
+                <div class="md:w-1/2 relative overflow-hidden bg-[#110F0E] flex items-center justify-center p-8">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover rounded-2xl group-hover:scale-110 group-hover:rotate-2 smooth-transition duration-500" alt="Coffee Package">
+                    <span class="absolute top-4 right-4 bg-[#D4AF37] text-[#110F0E] font-black text-[10px] px-3 py-1 rounded-full shadow">الأكثر مبيعاً</span>
+                </div>
+                <div class="md:w-1/2 p-8 flex flex-col justify-between space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-2xl text-[#110F0E] group-hover:text-[#D4AF37] smooth-transition">كولومبيا نيفادا</h3>
+                            <span class="text-xl font-black text-[#D4AF37]">58 ر.س</span>
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed font-light">محصول فريد يتميز بإيحاءات الشوكولاتة الداكنة والمكسرات مع حموضة متزنة تناسب مشروبات الحليب المقطرة.</p>
+                        
+                        <div class="mt-6 space-y-2 border-t border-gray-100 pt-4">
+                            <div class="flex justify-between text-[11px] font-medium"><span class="text-gray-400">القوام (Body):</span> <span class="text-[#110F0E] font-bold">ممتلئ / ثقيل</span></div>
+                            <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden"><div class="bg-[#D4AF37] h-full rounded-full" style="width: 85%"></div></div>
+                            
+                            <div class="flex justify-between text-[11px] font-medium"><span class="text-gray-400">الحموضة (Acidity):</span> <span class="text-[#110F0E] font-bold">فاكهية لطيفة</span></div>
+                            <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden"><div class="bg-[#D4AF37] h-full rounded-full" style="width: 45%"></div></div>
+                            
+                            <div class="flex justify-between text-[11px] font-medium mt-2 text-gray-400"><span>المعالجة: مغسولة</span> <span>الارتفاع: 1850م</span></div>
+                        </div>
+                    </div>
+                    <button onclick="alert('تمت إضافة كولومبيا نيفادا إلى سلة الشراء!')" class="w-full bg-[#110F0E] text-white text-xs font-bold py-3.5 rounded-xl group-hover:bg-[#D4AF37] group-hover:text-[#110F0E] smooth-transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span>إضافة للسلة</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-gray-100 group smooth-transition flex flex-col md:flex-row">
+                <div class="md:w-1/2 relative overflow-hidden bg-[#110F0E] flex items-center justify-center p-8">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover rounded-2xl group-hover:scale-110 group-hover:rotate-2 smooth-transition duration-500" alt="Coffee Package">
+                    <span class="absolute top-4 right-4 bg-[#110F0E] text-[#D4AF37] border border-[#D4AF37]/30 font-black text-[10px] px-3 py-1 rounded-full shadow">إصدار محدود</span>
+                </div>
+                <div class="md:w-1/2 p-8 flex flex-col justify-between space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-2xl text-[#110F0E] group-hover:text-[#D4AF37] smooth-transition">إثيوبيا همبيلا</h3>
+                            <span class="text-xl font-black text-[#D4AF37]">64 ر.س</span>
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed font-light">لعشاق الفاكهية والتعقيد العطري البارز. إيحاءات الياسمين، الخوخ، والعسل الحاضرة بقوة في كل رشفة.</p>
+                        
+                        <div class="mt-6 space-y-2 border-t border-gray-100 pt-4">
+                            <div class="flex justify-between text-[11px] font-medium"><span class="text-gray-400">القوام (Body):</span> <span class="text-[#110F0E] font-bold">خفيف / خوخي</span></div>
+                            <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden"><div class="bg-[#D4AF37] h-full rounded-full" style="width: 50%"></div></div>
+                            
+                            <div class="flex justify-between text-[11px] font-medium"><span class="text-gray-400">الحموضة (Acidity):</span> <span class="text-[#110F0E] font-bold">عالية / معقدة</span></div>
+                            <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden"><div class="bg-[#D4AF37] h-full rounded-full" style="width: 90%"></div></div>
+                            
+                            <div class="flex justify-between text-[11px] font-medium mt-2 text-gray-400"><span>المعالجة: مجففة شجرية</span> <span>الارتفاع: 2100م</span></div>
+                        </div>
+                    </div>
+                    <button onclick="alert('تمت إضافة إثيوبيا همبيلا إلى سلة الشراء!')" class="w-full bg-[#110F0E] text-white text-xs font-bold py-3.5 rounded-xl group-hover:bg-[#D4AF37] group-hover:text-[#110F0E] smooth-transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span>إضافة للسلة</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="menu" class="bg-white py-28 border-t border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-20 space-y-2">
+                <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold block">قائمتنا الحصرية داخل الفرع</span>
+                <h2 class="text-4xl font-bold text-[#110F0E]">قائمة المشروبات والمخبوزات</h2>
+                <div class="h-[2px] w-16 bg-[#D4AF37] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-[#F7F4F0] rounded-2xl overflow-hidden shadow-sm group hover:-translate-y-2 smooth-transition">
+                    <div class="h-64 bg-gray-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 smooth-transition duration-500" alt="Cortado">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent smooth-transition"></div>
+                    </div>
+                    <div class="p-6 flex justify-between items-start">
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-xl text-[#110F0E]">كورتادو النخبة</h3>
+                            <p class="text-xs text-gray-500 leading-relaxed">توازن هيدروليكي مثالي بين رغوة الحليب الحريرية وسينجل إسبريسو معقد.</p>
+                        </div>
+                        <span class="text-[#D4AF37] font-black text-lg bg-white px-3 py-1 rounded-lg border border-gray-100 shadow-sm">24 ر.س</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#F7F4F0] rounded-2xl overflow-hidden shadow-sm group hover:-translate-y-2 smooth-transition">
+                    <div class="h-64 bg-gray-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 smooth-transition duration-500" alt="V60">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent smooth-transition"></div>
+                    </div>
+                    <div class="p-6 flex justify-between items-start">
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-xl text-[#110F0E]">V60 كولومبيا حار/بارد</h3>
+                            <p class="text-xs text-gray-500 leading-relaxed">تقطير بطيء يسحب كامل النكهات المعقدة والفاكهية الواضحة بقوام ناصع.</p>
+                        </div>
+                        <span class="text-[#D4AF37] font-black text-lg bg-white px-3 py-1 rounded-lg border border-gray-100 shadow-sm">32 ر.س</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#F7F4F0] rounded-2xl overflow-hidden shadow-sm group hover:-translate-y-2 smooth-transition">
+                    <div class="h-64 bg-gray-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 smooth-transition duration-500" alt="Pastry">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent smooth-transition"></div>
+                    </div>
+                    <div class="p-6 flex justify-between items-start">
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-xl text-[#110F0E]">تارت الزعفران والفستق</h3>
+                            <p class="text-xs text-gray-500 leading-relaxed">مخبوزة طازجة يومياً بنكهات ومكونات محلية فاخرة لتناسب رشفات كوبك.</p>
+                        </div>
+                        <span class="text-[#D4AF37] font-black text-lg bg-white px-3 py-1 rounded-lg border border-gray-100 shadow-sm">42 ر.س</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+            <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold block">فلسفتنا ومفهومنا</span>
+            <h2 class="text-4xl font-serif font-bold text-[#110F0E] leading-tight">حيث تلتقي الهندسة المعمارية <br>بفن تقطير القهوة الفاخرة</h2>
+            <p class="text-gray-600 leading-relaxed font-light text-sm md:text-base">في NOC، لا نقدم مجرد جرعات كافيين؛ نحن نصنع تجربة بصرية وحسية متكاملة لروادنا. يتميز فرعنا الرئيسي في قلب حي العليا بالرياض بتصميم هندسي مينيمالي معاصر يمنحك شعوراً فورياً بالهدوء والتركيز الفائق، سواء كنت تبحث عن مساحة عمل إبداعية ملهمة أو لقاء راقٍ يستحق الذكر.</p>
+            
+            <div class="border-r-4 border-[#D4AF37] pr-6 italic text-sm text-gray-700 bg-white p-5 rounded-2xl shadow-sm border border-gray-100/50">
+                "نحن نؤمن بأن المساحة الجغرافية والمحيط الذي ترتشف فيه كوبك لا يقل أهمية أبداً عن جودة حبوب البن نفسها."
+            </div>
+        </div>
+        <div class="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl group border border-gray-200">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 smooth-transition duration-1000" alt="NOC Interior">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 right-6 text-white"><p class="text-xs text-[#D4AF37] font-bold uppercase tracking-wider">فرع العليا - الرياض</p><h3 class="text-lg font-bold">هدوء معاصر للمبدعين</h3></div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-200">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-[#110F0E]">شرفنا بحضورك أو تواصل معنا</h2>
+                <div class="space-y-4">
+                    <p class="text-sm text-gray-600 flex items-center gap-3"><i class="fa-solid fa-location-dot text-[#D4AF37] text-lg"></i> <span>برج العليا التجاري، الدور الأرضي، الرياض، المملكة العربية السعودية</span></p>
+                    <p class="text-sm text-gray-600 flex items-center gap-3"><i class="fa-solid fa-clock text-[#D4AF37] text-lg"></i> <span>يومياً: من الساعة 6:00 صباحاً وحتى 1:00 بعد منتصف الليل</span></p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="https://wa.me/966110000000" target="_blank" class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-lg hover:bg-[#20ba5a] animate-pulse-slow smooth-transition w-full sm:w-auto">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>واتساب خدمة العملاء</span>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#4f5bd5] via-[#962fbf] to-[#d62976] text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-lg hover:opacity-90 smooth-transition w-full sm:w-auto">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                        <span>تابعنا على إنستغرام</span>
+                    </a>
+                    <a href="tel:+96611000000" class="inline-flex items-center justify-center gap-2 bg-[#110F0E] text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-lg hover:bg-[#D4AF37] hover:text-[#110F0E] smooth-transition w-full sm:w-auto">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>اتصال هاتفي مباشر</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full h-64 bg-[#110F0E] rounded-3xl relative overflow-hidden flex flex-col justify-center items-center text-center p-8 text-white shadow-xl group border border-gray-800">
+                <div class="absolute inset-0 opacity-20 group-hover:scale-110 smooth-transition duration-1000">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="relative z-10 space-y-3">
+                    <div class="w-14 h-14 bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 rounded-full flex items-center justify-center text-2xl mx-auto mb-2 group-hover:bg-[#D4AF37] group-hover:text-[#110F0E] smooth-transition">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <p class="text-lg font-bold text-[#D4AF37]">اضغط لفتح الموقع الجغرافي</p>
+                    <p class="text-xs text-gray-400 max-w-xs mx-auto">حي العليا - المنطقة المركزية الفاخرة بجوار الأبراج الرئيسية.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-[#110F0E] text-gray-500 text-center py-8 text-xs border-t border-gray-900">
+        <p>© 2026 مقهى NOC Cafe. جميع الحقوق محفوظة. صُمم بعناية لرواد التميز بالرياض.</p>
+    </footer>
+
+</body>
+</html>
